@@ -5,7 +5,8 @@ const path = require('path');
 console.log(path.join(__dirname, 'public'));
 
 module.exports = {
-    entry: './src/playground/app.js',
+    mode: 'development',
+    entry: './src/app.js',
     output: {
         path: path.join(__dirname, 'public'),
         filename: 'bundle.js',
@@ -18,8 +19,11 @@ module.exports = {
             exclude: /node_modules/
         }]
     },
-    devtool: 'cheap-module-eval-source-map', //sourcemap
+    devtool: 'eval-cheap-module-source-map',
     devServer: {
-        contentBase: path.join(__dirname , 'public')
+        static: {
+        directory: path.join(__dirname , 'public')
+        },
+        historyApiFallback : true,
     }
 };

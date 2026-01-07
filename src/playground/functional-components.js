@@ -1,5 +1,3 @@
-//Stateless Functional Component
-
 class IndecisionApp extends React.Component {
      
     constructor(props){
@@ -100,9 +98,9 @@ class IndecisionApp extends React.Component {
 
 
 
-// IndecisionApp.defaultProps = {
-//     options: []
-// }
+IndecisionApp.defaultProps = {
+    options: []
+}
 
 
 const Header = (props) => {
@@ -179,21 +177,21 @@ class AddOption extends React.Component {
 
 
 
-// const User = (props) => {  //Stateless functional component
-//     return (<div>
-//         <p>Name: {props.name}</p>
-//        <p>Age: {props.age}</p>
-//     </div>);
-// }
+const User = (props) => {  //Stateless functional component
+    return (<div>
+        <p>Name: {props.name}</p>
+       <p>Age: {props.age}</p>
+    </div>);
+}
 
 
-// const jsx = (
-//     <div>
-//         <Header />
-//         <Action />
-//         <Options />
-//         <AddOption />
-//     </div>
-// )
+const jsx = (
+    <div>
+        <Header />
+        <Action />
+        <Options />
+        <AddOption />
+    </div>
+)
 
 ReactDOM.render(<IndecisionApp />, document.getElementById('app'))
